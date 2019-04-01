@@ -1,0 +1,44 @@
+body {
+  background: #fff;
+  color: #fff;
+}
+
+.navbar {
+  border-bottom: #008ed6 3px solid;
+}
+
+#footer {
+  border-top: #008ed6 3px solid;
+}
+
+#main-section .fa {
+  color: #fff;
+  background: #333;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+#main-section li, #main-section .specificListItem {
+  font-weight: bold;
+}
+#main-section .specificListItem {
+  text-decoration: underline;
+}
+
+@media print {
+  .screen-only {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
+  #help::before {
+    content: "For more help feel free to";
+  }
+}
+@media (max-width: 499px) {
+  #help::before {
+    content: "For more help";
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

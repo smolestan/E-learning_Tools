@@ -1,0 +1,64 @@
+// I use SCSS variables below just in case if I need to change this parameters
+$bg-color:#fff;
+$font-color:#fff;
+$primary-color: #008ed6;
+$font-size:30px;
+
+body {
+  background: $bg-color;
+  color: $font-color;
+}
+
+// Adding color line to the navbar bottom
+.navbar {
+  border-bottom: $primary-color 3px solid;
+}
+
+// Adding color line to the footer top
+#footer {
+  border-top: $primary-color 3px solid;
+}
+
+// Adding some stiling to the main section ellements by SCSS nesting
+#main-section {
+
+  // Making checkboxes in "build" page beautiful by costomizing "Font Awesome"
+  .fa {
+    color: #fff;
+    background: #333;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: $font-size;
+  }
+
+  // Adding some parameters to the list item appearance in main section
+  li {
+    font-weight: bold;
+  }
+
+  // Adding specific parameter extending property below just to show inheritance
+  .specificListItem {
+    @extend li;
+    text-decoration: underline;
+  }
+}
+
+// I use this media query so the *.gif image will not appear on printing
+@media print {
+  .screen-only {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  #help::before {
+    content: "For more help feel free to";
+  }
+}
+
+// Use this media query to shorten footer text on small screen devices
+@media (max-width: 499px) {
+  #help::before {
+    content: "For more help";
+  }
+}
